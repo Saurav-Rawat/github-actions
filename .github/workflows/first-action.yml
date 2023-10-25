@@ -1,0 +1,16 @@
+name: print-hello
+# workflow_dispatch will let us manually trigger this workflow
+on: workflow_dispatch
+jobs:
+  # can be any name
+  first-job:
+    # define runner where the job will run
+    runs-on: ubuntu-latest
+    steps:
+      # name will help us identify the step
+      - name: Print greeting
+      # runs will have the actual step that we want to do in the job we can have multiple steps
+        run: echo "hello world"
+      - name: Pring goodbye
+        run: echo "Done - bye!"
+    
